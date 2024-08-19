@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery</title>
+
+    <style>
+        #square{
+        
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        button:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- <button id="button">Fade out</button> -->
+     <button id="button">Animate</button>
+    <button id="para">Stop</button>
+    <button id="retorno"> Retorno</button>
+    <div id="square"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script>
+        // $("#button").click(()=>{
+        //     $("#square").fadeOut();
+        // })
+
+        // $("#button1").click(()=>{
+        //     $("#square").fadeIn();
+        // })
+
+        // $("#button").click(()=>{
+
+        //     $("#square").fadeToggle(2000);
+        // })
+        // $("#square").mouseleave(()=>{
+        //     $("#square").slideToggle(2000)
+        // })
+
+        // $("#button").click(()=>{ 
+        //     $("#square").slideToggle(2000)
+        // })
+
+        $("#button").click(function(){
+            $("#square").animate({ backgroundColor: "yellow" }, 2000); // Transição de 2 segundos
+            $("#square").animate({width:600 },3000);
+            $("#square").animate({  marginTop: 200},2000)
+            $("#square").animate({  marginLeft:  200},2000)
+
+
+        })
+
+        $("#para").click(()=>{
+            $("#square").css({backgroundColor:"black"},3000);
+            $("#square").stop();
+        })
+
+        $("#retorno").click(()=>{
+            $("#square").css({backgroundColor:"green"},3000);
+            $("#square").animate({width:400},3000)
+            $("#square").animate({  marginBottom:  200},2000)
+            $("#square").animate({  marginRight:  200},2000)
+
+            
+
+        })
+
+       
+    </script>
+</body>
+
+
+</html>
